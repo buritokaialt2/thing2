@@ -1,0 +1,52 @@
+# ---------------------------------------------------------------
+# PvPTournament configuration
+# ---------------------------------------------------------------
+
+# World that the arena and hub are in.
+world: world
+
+# Main PvP spawn (players are sent here on /start).
+arena:
+  x: 657
+  y: 100
+  z: 395
+
+# Sky / glass spectator hub (eliminated players and end-of-game teleport).
+hub:
+  x: 657
+  y: 163
+  z: 395
+
+# Players in this list are put into CREATIVE instead of ADVENTURE
+# when they are eliminated. They still play, still count on the
+# leaderboard and can still win.
+creative-on-elimination:
+  - buritokaiMC
+
+# Seconds of no-PvP protection after "GO!".
+grace-seconds: 30
+
+# Border settings (also changed live with /setstartborder and /setshrink).
+start-border: 300
+shrink: true
+
+# Border timing, in seconds. Timer starts the moment "GO!" is shown.
+border:
+  first-wait: 50      # wait before the very first warning
+  warning: 10         # countdown length after the warning title
+  shrink-time: 30     # how long a 50-block shrink takes
+  cooldown: 20        # pause between shrinks
+  shrink-amount: 50   # blocks removed per shrink
+  minimum: 50         # stop shrinking at this size
+
+# Housekeeping
+clear-inventory-on-start: false   # /stop always clears inventories
+clear-drops-on-death: true
+show-leaderboard: true
+
+# Saved slots (managed by /setplayer1-4, no need to edit by hand)
+slots:
+  1: ''
+  2: ''
+  3: ''
+  4: ''

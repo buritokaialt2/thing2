@@ -1,0 +1,57 @@
+name: PvPTournament
+version: '${project.version}'
+main: com.burito.tournament.TournamentPlugin
+api-version: '1.21'
+author: buritokaiMC
+description: 4-player last-man-standing PvP tournament with border shrinking and a live leaderboard.
+
+commands:
+  start:
+    description: Start a brand new tournament.
+    usage: /start
+    aliases: [tstart]
+    permission: tournament.admin
+  stop:
+    description: Fully stop and reset the tournament.
+    usage: /stop
+    aliases: [tstop]
+    permission: tournament.admin
+  reset:
+    description: Clear the leaderboard only.
+    usage: /reset
+    aliases: [treset]
+    permission: tournament.admin
+  setplayer1:
+    description: Set tournament slot 1.
+    usage: /setplayer1 <player>
+    permission: tournament.admin
+  setplayer2:
+    description: Set tournament slot 2.
+    usage: /setplayer2 <player>
+    permission: tournament.admin
+  setplayer3:
+    description: Set tournament slot 3.
+    usage: /setplayer3 <player>
+    permission: tournament.admin
+  setplayer4:
+    description: Set tournament slot 4.
+    usage: /setplayer4 <player>
+    permission: tournament.admin
+  setstartborder:
+    description: Set the starting world border size.
+    usage: /setstartborder <50|100|150|200|250|300>
+    permission: tournament.admin
+  setshrink:
+    description: Toggle automatic border shrinking.
+    usage: /setshrink <true|false>
+    permission: tournament.admin
+  tournament:
+    description: Show tournament status and settings.
+    usage: /tournament
+    aliases: [tinfo]
+    permission: tournament.admin
+
+permissions:
+  tournament.admin:
+    description: Allows use of all tournament commands.
+    default: op
